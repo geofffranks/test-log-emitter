@@ -2,10 +2,10 @@ package client
 
 import (
 	"fmt"
-	"test-log-emitter/config"
 	"time"
 
 	"code.cloudfoundry.org/go-loggregator"
+	"github.com/masters-of-cats/test-log-emitter/config"
 	"google.golang.org/grpc"
 )
 

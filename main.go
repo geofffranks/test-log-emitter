@@ -7,12 +7,12 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"test-log-emitter/client"
-	"test-log-emitter/config"
-	"test-log-emitter/emitters"
 
 	"gopkg.in/yaml.v2"
 
+	"github.com/masters-of-cats/test-log-emitter/client"
+	"github.com/masters-of-cats/test-log-emitter/config"
+	"github.com/masters-of-cats/test-log-emitter/emitters"
 	flag "github.com/spf13/pflag"
 )
 
