@@ -40,10 +40,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	emitter := emitters.NewSpikeEmitter(loggregatorClient)
+	gaugeEmitter := emitters.NewGaugeEmitter(loggregatorClient)
+	counterEmitter := emitters.NewCounterEmitter(loggregatorClient)
 
 	http.HandleFunc("/", ping)
-	http.Handle("/gauge", emitter.EmitGauge())
+	http.Handle("/gauge", gaugeEmitter.EmitGauge())
+	http.Handle("/counter", counterEmitter.EmitCounter())
 
 	fmt.Printf("Starting cpu usage logger on port %d...", conf.ListenPort)
 	if err := http.ListenAndServe(fmt.Sprintf(":%d", conf.ListenPort), nil); err != nil {
@@ -53,7 +55,8 @@ func main() {
 
 func ping(w http.ResponseWriter, r *http.Request) {
 	message := "What do you want to emit today?\n"
-	message = message + "* POST /spike - posts an app instance spike\n"
+	message = message + "* POST /gauge - posts a gauge metric\n"
+	message = message + "* POST /counter - posts an counter metric\n"
 
 	if _, err := io.WriteString(w, message); err != nil {
 		http.Error(w, fmt.Sprintf("Failed to resond to ping request: %v", err), http.StatusInternalServerError)
