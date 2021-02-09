@@ -4,17 +4,15 @@ import (
 	"fmt"
 	"time"
 
-	"code.cloudfoundry.org/go-loggregator/v8"
+	"code.cloudfoundry.org/go-loggregator"
 	"github.com/masters-of-cats/test-log-emitter/config"
 	"google.golang.org/grpc"
 )
 
-const (
-	CertsDir   = "certs/loggregator"
-	CACertPath = CertsDir + "/ca_cert"
-	CertPath   = CertsDir + "/cert"
-	KeyPath    = CertsDir + "/key"
-)
+const CertsDir = "certs/loggregator"
+const CACertPath = CertsDir + "/ca_cert"
+const CertPath = CertsDir + "/cert"
+const KeyPath = CertsDir + "/key"
 
 func NewLoggregatorIngressClient(config config.LoggregatorConfig) (*loggregator.IngressClient, error) {
 	tlsConfig, err := loggregator.NewIngressTLSConfig(
