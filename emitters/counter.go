@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"code.cloudfoundry.org/go-loggregator"
+	"code.cloudfoundry.org/go-loggregator/v8"
 )
 
 type CounterMetric struct {
