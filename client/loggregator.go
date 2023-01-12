@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/go-loggregator"
-	"github.com/masters-of-cats/test-log-emitter/config"
+	"github.com/cloudfoundry/test-log-emitter/config"
 	"google.golang.org/grpc"
 )
 
