@@ -1,4 +1,4 @@
-module github.com/cloudfoundry/test-log-emitter
+module code.cloudfoundry.org/test-log-emitter
 
 go 1.19
 

@@ -10,9 +10,9 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/cloudfoundry/test-log-emitter/client"
-	"github.com/cloudfoundry/test-log-emitter/config"
-	"github.com/cloudfoundry/test-log-emitter/emitters"
+	"code.cloudfoundry.org/test-log-emitter/client"
+	"code.cloudfoundry.org/test-log-emitter/config"
+	"code.cloudfoundry.org/test-log-emitter/emitters"
 	flag "github.com/spf13/pflag"
 )
 
