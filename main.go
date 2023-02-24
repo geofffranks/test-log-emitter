@@ -42,9 +42,11 @@ func main() {
 	}
 	gaugeEmitter := emitters.NewGaugeEmitter(loggregatorClient)
 	counterEmitter := emitters.NewCounterEmitter(loggregatorClient)
+	timerEmitter := emitters.NewTimerEmitter(loggregatorClient)
 
 	http.HandleFunc("/", ping)
 	http.Handle("/gauge", gaugeEmitter.EmitGauge())
+	http.Handle("/timer", timerEmitter.EmitTimer())
 	http.Handle("/counter", counterEmitter.EmitCounter())
 
 	fmt.Printf("Starting cpu usage logger on port %d...", conf.ListenPort)
