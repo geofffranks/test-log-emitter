@@ -42,9 +42,11 @@ func main() {
 	}
 	gaugeEmitter := emitters.NewGaugeEmitter(loggregatorClient)
 	counterEmitter := emitters.NewCounterEmitter(loggregatorClient)
+	timerEmitter := emitters.NewTimerEmitter(loggregatorClient)
 
 	http.HandleFunc("/", ping)
 	http.Handle("/gauge", gaugeEmitter.EmitGauge())
+	http.Handle("/timer", timerEmitter.EmitTimer())
 	http.Handle("/counter", counterEmitter.EmitCounter())
 
 	fmt.Printf("Starting cpu usage logger on port %d...", conf.ListenPort)
@@ -56,6 +58,7 @@ func main() {
 func ping(w http.ResponseWriter, r *http.Request) {
 	message := "What do you want to emit today?\n"
 	message = message + "* POST /gauge - posts a gauge metric\n"
+	message = message + "* POST /timer - posts a timer metric\n"
 	message = message + "* POST /counter - posts an counter metric\n"
 
 	if _, err := io.WriteString(w, message); err != nil {

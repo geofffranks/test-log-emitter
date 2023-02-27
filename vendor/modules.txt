@@ -1,12 +1,12 @@
-# code.cloudfoundry.org/go-diodes v0.0.0-20230109184538-4158d99ba5db
-## explicit; go 1.18
+# code.cloudfoundry.org/go-diodes v0.0.0-20190809170250-f77fb823c7ee
+## explicit
 code.cloudfoundry.org/go-diodes
-# code.cloudfoundry.org/go-loggregator/v9 v9.0.3
+# code.cloudfoundry.org/go-loggregator/v9 v9.0.4
 ## explicit; go 1.18
 code.cloudfoundry.org/go-loggregator/v9
 code.cloudfoundry.org/go-loggregator/v9/rpc/loggregator_v2
-# code.cloudfoundry.org/tlsconfig v0.0.0-20220621140725-0e6fbd869921
-## explicit; go 1.17
+# code.cloudfoundry.org/tlsconfig v0.0.0-20200131000646-bbe0f8da39b3
+## explicit; go 1.13
 code.cloudfoundry.org/tlsconfig
 # github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0
 ## explicit; go 1.13
@@ -19,10 +19,14 @@ github.com/golang/protobuf/ptypes
 github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/timestamp
-# github.com/google/pprof v0.0.0-20230111200839-76d1ae5aea2b
-## explicit; go 1.18
+# github.com/google/pprof v0.0.0-20210407192527-94a9f03dee38
+## explicit; go 1.14
 github.com/google/pprof/profile
-# github.com/onsi/ginkgo/v2 v2.7.0
+# github.com/hpcloud/tail v1.0.0
+## explicit
+# github.com/onsi/ginkgo v1.10.3
+## explicit
+# github.com/onsi/ginkgo/v2 v2.8.3
 ## explicit; go 1.18
 github.com/onsi/ginkgo/v2/config
 github.com/onsi/ginkgo/v2/formatter
@@ -43,7 +47,7 @@ github.com/onsi/ginkgo/v2/types
 # github.com/spf13/pflag v1.0.5
 ## explicit; go 1.12
 github.com/spf13/pflag
-# golang.org/x/net v0.5.0
+# golang.org/x/net v0.7.0
 ## explicit; go 1.17
 golang.org/x/net/context
 golang.org/x/net/http/httpguts
@@ -52,30 +56,30 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.4.0
+# golang.org/x/sys v0.5.0
 ## explicit; go 1.17
 golang.org/x/sys/unix
-# golang.org/x/text v0.6.0
+# golang.org/x/text v0.7.0
 ## explicit; go 1.17
 golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
-# golang.org/x/tools v0.5.0
+# golang.org/x/tools v0.6.0
 ## explicit; go 1.18
 golang.org/x/tools/go/ast/inspector
 golang.org/x/tools/internal/typeparams
-# google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f
-## explicit; go 1.19
+# google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013
+## explicit; go 1.11
 google.golang.org/genproto/googleapis/rpc/status
-# google.golang.org/grpc v1.52.0
+# google.golang.org/grpc v1.51.0
 ## explicit; go 1.17
 google.golang.org/grpc
 google.golang.org/grpc/attributes
 google.golang.org/grpc/backoff
 google.golang.org/grpc/balancer
 google.golang.org/grpc/balancer/base
-google.golang.org/grpc/balancer/grpclb/grpclbstate
+google.golang.org/grpc/balancer/grpclb/state
 google.golang.org/grpc/balancer/roundrobin
 google.golang.org/grpc/binarylog/grpc_binarylog_v1
 google.golang.org/grpc/channelz
@@ -152,6 +156,10 @@ google.golang.org/protobuf/types/descriptorpb
 google.golang.org/protobuf/types/known/anypb
 google.golang.org/protobuf/types/known/durationpb
 google.golang.org/protobuf/types/known/timestamppb
+# gopkg.in/fsnotify.v1 v1.4.7
+## explicit
+# gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7
+## explicit
 # gopkg.in/yaml.v2 v2.4.0
 ## explicit; go 1.15
 gopkg.in/yaml.v2
